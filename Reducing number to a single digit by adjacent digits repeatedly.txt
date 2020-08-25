@@ -1,30 +1,25 @@
 class Sample{ 
-  
-    // Function to return the resultant digit 
-    // after performing the given operations 
+ 
     static int RSF(int n) 
     { 
         while (n >= 10) { 
   
-            // Creating an extra copy of n 
+           
             int x = n; 
             int l = 0; 
   
-            // Counting the number of digits in n 
             while (n > 0) { 
                 n = n / 10; 
                 l++; 
             } 
   
-            // Now n is 0 
-            // Creating an array of length l 
+            
             int a[] = new int[l]; 
-  
-            // Initializing i with the last index of array 
+ 
             int i = l - 1; 
             while (x > 0) { 
   
-                // Filling array from right to left 
+               
                 a[i] = x % 10; 
                 x = x / 10; 
                 i--; 
@@ -38,8 +33,7 @@ class Sample{
             } 
         } 
   
-        // While loop ends here and we have found 
-        // the RSF value of N 
+       
         return n; 
     } 
  public static void main(String[] arg) 
@@ -47,10 +41,10 @@ class Sample{
        Scanner sc=new Scanner(System.in);
         int n = sc.nextInt();
   
-        // Passing n to RSF function and getting answer 
+    
         int ans = RSF(n); 
   
-        // Printing the value stored in ans 
+        
         System.out.println(ans); 
     } 
 } 
