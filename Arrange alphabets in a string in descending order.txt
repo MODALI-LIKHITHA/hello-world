@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char str[100];
+scanf("%s",str);
+
+int num[26]={0};
+
+for(int i=0;i<strlen(str);i++){
+num[str[i]-97]=1;
+
+}
+for(int i=25;i>=0;i--){
+if(num[i]==1)
+printf("%c",i+97);
+}
+
+}
